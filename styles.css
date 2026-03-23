@@ -657,7 +657,7 @@ a:hover {
 
 .contact-panel {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1.2rem;
 }
@@ -673,9 +673,6 @@ a:hover {
   margin-top: 1rem;
 }
 
-.contact-form {
-  padding: 1rem;
-}
 .links .btn {
   border-color: rgba(57, 255, 20, 0.35);
   background: rgba(57, 255, 20, 0.08);
@@ -688,35 +685,6 @@ a:hover {
   color: #032704;
   border-color: transparent;
   box-shadow: 0 0 18px rgba(57, 255, 20, 0.22);
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-  margin: 0.7rem 0;
-}
-
-label {
-  font-weight: 600;
-  font-size: 0.94rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.025);
-  color: var(--text);
-  padding: 0.8rem 0.9rem;
-  outline: none;
-}
-
-input:focus,
-textarea:focus {
-  border-color: var(--line-strong);
-  box-shadow: 0 0 0 3px rgba(57, 255, 20, 0.09);
 }
 
 .site-footer {
