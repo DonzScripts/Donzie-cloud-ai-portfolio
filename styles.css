@@ -456,15 +456,53 @@ a:hover {
 
 .project-visual {
   position: relative;
-  height: 190px;
-  display: grid;
-  place-items: center;
+  height: 220px;
+  overflow: hidden;
   border-bottom: 1px solid var(--line);
-  font-weight: 900;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  background: #050905;
 }
+
+/* Screenshot styling */
+.project-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+.project-card:hover .project-screenshot {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+
+  /* ELECTRIC GREEN GLOW */
+  box-shadow:
+    0 0 25px rgba(57, 255, 20, 0.25),
+    0 0 60px rgba(57, 255, 20, 0.15);
+}
+
+/* Optional overlay glow for extra premium feel */
+.project-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(57, 255, 20, 0.08),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-visual::after {
+  opacity: 1;}
 
 .project-visual span {
   position: relative;
@@ -637,6 +675,19 @@ a:hover {
 
 .contact-form {
   padding: 1rem;
+}
+.links .btn {
+  border-color: rgba(57, 255, 20, 0.35);
+  background: rgba(57, 255, 20, 0.08);
+  color: var(--neon);
+  font-weight: 700;
+}
+
+.links .btn:hover {
+  background: linear-gradient(135deg, var(--neon) 0%, var(--neon-soft) 100%);
+  color: #032704;
+  border-color: transparent;
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.22);
 }
 
 .field {
